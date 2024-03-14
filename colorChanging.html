@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        margin: 300px;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Automatic Color Changer</h1>
+        <h2 class="text"></h2>
+
+    </div>
+    <script>
+        let body = document.querySelector('body');
+        let text = document.querySelector('.text')
+
+        function random() {
+            let colors = ['violet', 'red', 'green', 'pink', 'purple', 'yellow', 'orange', 'aqua', 'crimson', 'darkmagenta', 'blue', 'brown', 'grey', 'yellowgreen', 'skyblue', 'deeppink'];
+            let colorIndex = Math.floor(Math.random() * colors.length);
+            document.body.style.backgroundColor = colors[colorIndex];
+            text.innerHTML = colors[colorIndex];
+
+
+        }
+        setInterval(random, 1000)
+    </script>
+</body>
+
+</html>
